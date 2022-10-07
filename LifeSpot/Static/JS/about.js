@@ -22,17 +22,19 @@ function getReview() {
     }
 
     // Сохраним текущее время
-    review["date"] = new Date().toLocaleString()
+    review["date"] = new Date().toLocaleString();
 
    
     // Добавим на страницу
-    wrieReview(review)
+    writeReview(review)
+   // writeReview();
 }
 
 /*
 * Запишем отзыв на страницу
 *
 * */
+
 const writeReview = review => {
     document.getElementsByClassName('reviews')[0].innerHTML += '    <div class="review-text">\n' +
         `<p> <i> <b>${review['userName']}</b>  ${review['date']}</i></p>` +
